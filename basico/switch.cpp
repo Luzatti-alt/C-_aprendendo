@@ -4,6 +4,7 @@ int main(){
     int mes;
     std::cout<<"digite o número do mês"<<std::endl;
     std::cin>>mes;
+    //exemplo com números se fosse letra case '___':
     switch(mes){
         case 1:
         std::cout<<"Janeiro"<<std::endl;
