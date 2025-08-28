@@ -1,5 +1,9 @@
 #include <iostream>
 int main(){
-    std::cout<<"oi"<<std::endl;
+    //exemplo de foreach
+    std::string array[] = {"batata","tomate","suco"};
+    for(int i = 0; i < sizeof(array)/sizeof(array[0]);i++){
+        std::cout<<array[i]<<std::endl;
+    }
     return 0;
 }
