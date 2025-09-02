@@ -1,0 +1,14 @@
+GLFW → janelas e inputs
+GLAD (ou GLEW) → carregar funções OpenGL
+GLM → matemática (vetores e matrizes)
+stb_image → carregar imagens(texturas)
+Assimp → carregar modelos 3D (OBJ, FBX)
+
+O que o Assimp suporta?
+Formatos comuns do Blender:
+.blend (mas limitado: precisa salvar em versão compatível, nem sempre funciona bem)
+.obj (mais estável, sem animações)
+.fbx (bom para animações e hierarquia de ossos)
+.dae (COLLADA)
+.glTF (.gltf / .glb, muito usado hoje em engines modernas)
+O recomendado é: não usar .blend,exportar do Blender para .fbx ou .obj de preferencia 

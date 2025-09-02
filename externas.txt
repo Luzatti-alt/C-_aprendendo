@@ -1,0 +1,26 @@
+tem duas opções:
+
+(a) Baixar manualmente
+Vai no site da biblioteca (ex: GLFW.org)
+Baixa o .zip → dentro dele tem:
+include/ → headers (.h)
+lib/ → binários (.lib ou .dll)
+Você coloca:
+include/ na sua pasta de includes
+lib/ na sua pasta de libs
+dll no mesmo diretório do seu .exe
+Compilar:
+g++ main.cpp -Iinclude -Llib -lglfw3 -lopengl32 -o app.exe
+
+(b) Usar um gerenciador de pacotes (estilo pip)
+Hoje em dia temos alguns para C++:
+vcpkg (da Microsoft)
+git clone https://github.com/microsoft/vcpkg.git
+cd vcpkg
+./bootstrap-vcpkg.sh
+./vcpkg install glfw3
+Depois no seu projeto:
+g++ main.cpp -I[path]/vcpkg/installed/x64-windows/include -L[path]/vcpkg/installed/x64-windows/lib -lglfw3 -lopengl32
+Conan (mais avançado, estilo pip para C++):
+pip install conan
+conan install glfw/3.3.8@
