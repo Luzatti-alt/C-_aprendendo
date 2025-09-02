@@ -1,0 +1,7 @@
+memoria ->[machine code|stack(pilha de dados so podemos acessar o topo)|heap(a ordem nn importa e podemos acessar a qualquer momento)]
+machine code esta na região read only/codigo que é executado(parte compilada(instruçoes))
+stack é tipo a base da memoria e o projeto, onde ele acessa o topo da memoria(variaveis e funções) localmente o tamanho da stack varia conforme os passos 
+são executados,acesso LIFO(topo da pilha) é feito automaticamente pelo compiler
+heap usos variaveis em multiplos metodos, datas acessiveis a metodos uso de pointers para saber onde fica no heap, 
+ele acessa de forma dinamica o resto da memoria, as variaveis aqui tambem são dinamicas, tem que ser gerenciado no codigo(o programador tem que criar a gestão de memoria)
+buffer espaço na memoria usada para armazenar dados nn precisa do RAII mas é melhor com()numa gpué posicoes de vertices cores erc

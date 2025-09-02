@@ -1,9 +1,3 @@
-2. Conceitos de memória
-
-RAII → usar std::unique_ptr e std::shared_ptr no lugar de new/delete.
-
-Buffers → entender arrays de dados (como listas de vértices) que serão enviados à GPU.
-
 3. Matemática para gráficos
 
 Vetores 2D/3D → soma, subtração, produto escalar (ângulo), produto vetorial (normal).
