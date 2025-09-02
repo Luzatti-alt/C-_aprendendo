@@ -1,39 +1,37 @@
 #include <iostream>
 #define GLFW_INCLUDE_NONE
+//glfw gera a janela
+//glad carrega certos aspectos opengl como por exemplo cores
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 int main() {
+    glfwInit();
     //iniciar glfw
-    if (!glfwInit()) {
-        // Initialization failed
-        std::cerr << "Falha ao inicializar a GLFW" << std::endl;
-        return -1;
-
-    }
-    //criar janela
-    GLFWwindow* window = glfwCreateWindow(900, 800, "OpenGL começando", NULL, NULL);//criar janela
-    if (window == NULL) {
-        std::cerr << "Falha ao criar a janela GLFW" << std::endl;
+    glfwInit();
+    //definir versão opengl
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,3);//opengl 3 para cima
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,3);//minimo opengl 3
+    glfwWindowHint(GLFW_OPENGL_PROFILE,GLFW_OPENGL_CORE_PROFILE);
+    //tipo um pacote(core(somente o necessario/atualizado(ser for descontinuada vai ao outro perfil)) e compatibilidade(todas as funções até mesmo as descontinuadas))
+    //criar elemento janela
+    GLFWwindow *janela = glfwCreateWindow(800,800,"App",NULL,NULL);//x,y,nome,optional monitor(fullscreen), compartilhar contexto(multiplas janelas)
+    if(janela == NULL){
+        std::cout<<"algum problema ao criar a janela"<<std::endl;
         glfwTerminate();
         return -1;
-    }
-    glfwMakeContextCurrent(window);//linkar com opengl
-    // 3. Iniciar GLAD
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cerr << "Falha ao inicializar o GLAD" << std::endl;
-        return -1;
-    }
-    // 4. Loop de renderização 
-    while (!glfwWindowShouldClose(window)) {
-        // Renderize aqui
-        glClearColor(0.012f, 0.40f, 0.988f, 1.0f);//cor da janela(r g b a)= valor/255 aprox o valor
-        glClear(GL_COLOR_BUFFER_BIT);
+    }//criar janela
+    glfwMakeContextCurrent(janela);//definir contexto atual(conceito opengl)
 
-        // Troca os buffers e lida com eventos
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+    gladLoadGL();//carrega as funções opengl
+
+    glViewport(0,0,800,800);//area de renderização(A(x,y),B(x,y))
+    //manter a janela aberta
+    while(!glfwWindowShouldClose(janela)){
+        //processar tudo
+        glfwPollEvents();//sem isso a janela nn respondera
     }
+    glfwDestroyWindow(janela);//destoi janela
     // 5. Encerrar GLFW
     glfwTerminate();
     return 0;
