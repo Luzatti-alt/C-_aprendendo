@@ -2,6 +2,7 @@
 // um tipo de dado que cria um conjunto fixo de constantes nomeadas, facilitando o uso de valores pré-definidos e limitados dentro de um contexto específico
 //definido pelo usuario
 enum dia {segunda = 0, terça = 1, quarte = 2, quinta = 3, sexta = 4, sabado = 5, domingo = 6};
+//se eu so colocar um nome ele ja atribui um valor de 0,1,2 etc
 int main(){
     dia hoje = terça;
     //se eu por um vslor que nn esta no enum vai dar erro
