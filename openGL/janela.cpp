@@ -12,7 +12,7 @@ int main() {
 
     }
     //criar janela
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Minha Janela OpenGL", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(900, 800, "OpenGL começando", NULL, NULL);
     if (window == NULL) {
         std::cerr << "Falha ao criar a janela GLFW" << std::endl;
         glfwTerminate();
