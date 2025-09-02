@@ -1,0 +1,29 @@
+2. Conceitos de memória
+
+RAII → usar std::unique_ptr e std::shared_ptr no lugar de new/delete.
+
+Buffers → entender arrays de dados (como listas de vértices) que serão enviados à GPU.
+
+3. Matemática para gráficos
+
+Vetores 2D/3D → soma, subtração, produto escalar (ângulo), produto vetorial (normal).
+
+Matrizes 4x4 → usadas para modelar translações, rotações, escala.
+
+Transformações lineares → manipular objetos no espaço.
+
+Sistemas de coordenadas → local → mundo → câmera → tela.
+
+4. Fundamentos do OpenGL
+
+GPU & Shaders → CPU manda dados, GPU calcula pixels.
+
+Pipeline gráfica → vértices → rasterização → fragmentos.
+
+Criar janela (GLFW ✅).
+
+Carregar funções OpenGL (GLAD).
+
+Primeiro triângulo (VAO, VBO, EBO).
+
+Shaders GLSL (vertex e fragment shaders).
