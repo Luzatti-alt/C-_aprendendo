@@ -17,6 +17,8 @@ void andar(int passos){
     if(passos>0){
         std::cout<<"deu um passo \n";
         andar(passos-1);
+        //se nn tiver o -1 cria um stack overflow
+        //(wikipedia: When a program attempts to use more space than is available on the call stack (that is, when it attempts to access memory beyond the call stack's bounds, which is essentially a buffer overflow), the stack is said to overflow, typically resulting in a program crash.)
     }
     //o uso de recursion e interactive é varia com o problema
     //certos problemas a recurion é melhor que a interativa
