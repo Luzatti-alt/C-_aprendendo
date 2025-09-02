@@ -12,13 +12,13 @@ int main() {
 
     }
     //criar janela
-    GLFWwindow* window = glfwCreateWindow(900, 800, "OpenGL começando", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(900, 800, "OpenGL começando", NULL, NULL);//criar janela
     if (window == NULL) {
         std::cerr << "Falha ao criar a janela GLFW" << std::endl;
         glfwTerminate();
         return -1;
     }
-    glfwMakeContextCurrent(window);
+    glfwMakeContextCurrent(window);//linkar com opengl
     // 3. Iniciar GLAD
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         std::cerr << "Falha ao inicializar o GLAD" << std::endl;
@@ -27,7 +27,7 @@ int main() {
     // 4. Loop de renderização 
     while (!glfwWindowShouldClose(window)) {
         // Renderize aqui
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClearColor(0.012f, 0.40f, 0.988f, 1.0f);//cor da janela(r g b a)= valor/255 aprox o valor
         glClear(GL_COLOR_BUFFER_BIT);
 
         // Troca os buffers e lida com eventos
