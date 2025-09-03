@@ -10,7 +10,7 @@
 //um exemplo de vertex shader e fragment shader
 //por enquanto trabalharemos em 2 dimensoes 
 //a origem esta mo meio da janela(o resto é a mesma logica de um plano cartesiano)
-const char *vertexShaderSource = "#version 330 cor\n"
+const char *vertexShaderSource = "#version 330 core\n"
 "layout (location = 0) in vec3 aPos;\n"
 "void main()\n"
 "{\n"
@@ -35,9 +35,9 @@ int main() {
     //floats normais tbm funcionam mas o do opengl funciona melhor com aplicações opengl
     GLfloat vertices[]=
     {
-        -0.5f, -0.5f * float(sqrt(3))/ 3, 0.0f,
+        -0.5f, -0.5f * float(sqrt(3))/ 3, 0.3f,
         0.5f, -0.5f * float(sqrt(3))/ 3, 0.0f,
-        0.5f, 0.5f * float(sqrt(3))/ 2, 0.0f
+        0.0f, 0.5f * float(sqrt(3))/ 2, 0.0f
     };
     //elementos opengl são acessados via referencias
     //criar elemento janela
