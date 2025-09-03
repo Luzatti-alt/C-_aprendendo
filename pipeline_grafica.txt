@@ -1,0 +1,2 @@
+varias funçoes que usam dados no inicio e fim é que da um frame/vertex como output =/= do vertice matematico
+vertex shader: pega a posiçoes do vertice e as transforma dps de todas as Transformações o shape assembler acontece(pega as posições e as conecta)

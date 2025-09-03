@@ -26,7 +26,7 @@ int main() {
     gladLoadGL();//carrega as funções opengl
     //criando uma cor
     glClearColor(0.18f,0.70f, 0.97f, 1.0f);//definir cor (rgba)
-    glClear(GL_COLOR_BUFFER_BIT);//limar buffer
+    glClear(GL_COLOR_BUFFER_BIT);//limpar buffer
     glfwSwapBuffers(janela);//troca de buffers
     glViewport(0,0,800,800);//area de renderização(A(x,y),B(x,y))
     //manter a janela aberta
